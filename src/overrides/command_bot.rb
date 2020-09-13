@@ -2,7 +2,7 @@ require 'async'
 
 module Discordrb::Commands
   def execute_command(name, event, arguments, chained = false, check_permissions = true)
-    Async do |task|
+    Async do
       debug("Executing command #{name} with arguments #{arguments}")
       return unless @commands
   

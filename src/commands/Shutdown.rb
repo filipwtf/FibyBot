@@ -4,8 +4,8 @@ module FibyBot
       command :shutdown  do |event|
         break unless event.user.id == 451124287244468226 
         
-        FibyBot::Bot.send_message(event.channel.id, 'Bot is shutting down')
-        FibyBot::Bot.stop
+        FibyBot::BOT.send_message(event.channel.id, 'Bot is shutting down')
+        FibyBot::BOT.stop
         exit
       end
     end
